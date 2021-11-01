@@ -1,7 +1,13 @@
 #!/bin/bash
 
 function rgdocker() {
-    (cd ~/aws/rg-dockerization-template/scripts && ./rg-docker $*)
+	if [[ "$1" == "s" ]]; then
+		(cd ~/aws/rg-dockerization-template/scripts && ./rg-docker start --project $2)
+	elif [[ "$1" == "st" ]]; then
+		(cd ~/aws/rg-dockerization-template/scripts && ./rg-docker stop --project $2)
+	else
+		(cd ~/aws/rg-dockerization-template/scripts && ./rg-docker $*)
+	fi
 }
 
 function rgxdebug() {
