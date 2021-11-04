@@ -10,7 +10,7 @@ function arupdate() {
         return
     fi
 
-    if (( ( $(( EPOCHSECONDS / 60 / 60 / 24 )) - $LAST_EPOCH ) < $(( UPDATE_ZSH_DAYS - 6 )) )); then
+    if (( ( $(( EPOCHSECONDS / 60 / 60 / 24 )) - $LAST_EPOCH ) < $(( UPDATE_ZSH_DAYS - 1 )) )); then
         return
     fi
 
