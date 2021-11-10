@@ -5,17 +5,17 @@ function armake() {
 }
 
 function arupdate() {
-    if ! source "${ZSH_CACHE_DIR}/.zsh-update" 2>/dev/null || [[ -z "$LAST_EPOCH" ]]; then
-        printf "\033[0;91m==> %s\n\033[0m" "No last last epcoh date"
+    zmodload zsh/datetime
+    if ! source ~/.settings/cache/last-update 2>/dev/null || [[ -z "$LAST_UPDATE" ]]; then
+        echo "LAST_UPDATE=$(( EPOCHSECONDS / 60 / 60 / 24 ))" > ~/.settings/cache/last-update
         return
     fi
 
-    if (( ( $(( EPOCHSECONDS / 60 / 60 / 24 )) - $LAST_EPOCH ) < $(( UPDATE_ZSH_DAYS - 1 )) )); then
+    if (( $(( $(( EPOCHSECONDS / 60 / 60 / 24 )) - $LAST_UPDATE )) < 13 )); then
         return
     fi
 
-    printf "\033[0;93m==> %s\n\033[0m" "Pulling latest changes from repository..."
-    cd ~/.settings && git pull
-    printf "\033[0;93m==> %s\n\033[0m" "Checking if plugins need updating..."
     armake update
+
+    echo "LAST_UPDATE=$(( EPOCHSECONDS / 60 / 60 / 24 ))" > ~/.settings/cache/last-update
 }

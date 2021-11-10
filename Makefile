@@ -17,6 +17,8 @@ install:
 	@bash scripts/zsh-autosuggestions/install_autosuggestions.sh
 	@bash scripts/zsh-syntax-highlighting/install_syntax_highlighting.sh
 update:
+	@bash scripts/update_repo.sh
+	@printf "\033[0;93m==> %s\n\033[0m" "Checking if plugins need updating..."
 	@bash scripts/spaceship-prompt/update_spaceship_prompt.sh
 	@bash scripts/zsh-autosuggestions/update_autosuggestions.sh
 	@bash scripts/zsh-syntax-highlighting/update_syntax_highlighting.sh
