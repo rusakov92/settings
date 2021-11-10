@@ -69,6 +69,11 @@ plugins=( git docker docker-compose composer brew z zsh-syntax-highlighting zsh-
 
 export LANG=en_US.UTF-8
 
+# Load local settings
+if [ -f ~/.settings/.zshrc.local ]; then
+	source ~/.settings/.zshrc.local
+fi
+
 # Load Oh My Zsh plugin
 source $ZSH/oh-my-zsh.sh
 

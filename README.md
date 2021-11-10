@@ -12,3 +12,13 @@ git clone git@github.com:rusakov92/settings.git .settings
 cd ~/.settings
 make install
 ```
+
+# Configuration
+If you want to alter the .zshrc file locally you can create a .zshrc.local file.
+```
+touch ~/.settings/.zshrc.local
+# Edit the file and add your custom settings, like altering the theme or adding custom personal aliases
+vi ~/.settings/.zshrc.local
+~~~
+ZSH_THEME="robbyrussell"
+```
