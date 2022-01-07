@@ -94,4 +94,4 @@ for alias in ~/.settings/aliases/*; do
 done
 
 # Run check to update plugins and theme
-arupdate
+update_shell_settings

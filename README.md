@@ -8,17 +8,14 @@ This repository contains my personal settings for ZSH and the Oh My Zsh framewor
 # Install
 Clone this repo into your home directory and run the make install command:
 ```shell
-git clone git@github.com:rusakov92/settings.git .settings
+git clone git@github.com:rusakov92/settings.git ~/.settings
 cd ~/.settings
 make install
 ```
 
 # Configuration
-If you want to alter the .zshrc file locally you can create a .zshrc.local file.
+If you want to alter the .zshrc file locally you can create a .zshrc.local file. Use the example file provided in the repository.
+```shell
+cp ~/.settings/.zshrc.local.example ~/.settings/.zshrc.local
 ```
-touch ~/.settings/.zshrc.local
-# Edit the file and add your custom settings, like altering the theme or adding custom personal aliases
-vi ~/.settings/.zshrc.local
-~~~
-ZSH_THEME="robbyrussell"
-```
+Now you are free to edit the file and add your custom settings, like altering the theme or adding custom personal aliases.
