@@ -1,0 +1,2 @@
+# Overwrite existing theme loaded from the .zshrc file.
+ZSH_THEME="robbyrussell"
