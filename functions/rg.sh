@@ -16,7 +16,7 @@ function rgxdebug() {
 
 function rgreset() {
 	if [[ "$1" == "-f" ]]; then
-		(cd ~/aws/rg-dockerization-template/scripts && ./rg-reset --prepare-phpconf-local --composer-install && ./rg-reset --db-drop-tenants && ./rg-reset --db-rg --db-sftp --db-create-tenants --compile-locales --prepare-hooks --prepare-phpconfs --mappings-locales-compile --prepare-supervisor --flush-memcached-all)
+		(cd ~/aws/rg-dockerization-template/scripts && ./rg-reset -b)
 	elif [[ "$1" == "-n" ]]; then
 		(cd /Volumes/RG-DOCK/rg_core && yarn install && yarn build-development)
 	else
