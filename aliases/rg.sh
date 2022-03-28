@@ -1,4 +1,5 @@
 #!/bin/bash
 
-alias blessme="~/.blessclient/blessclient run -c ~/.blessclient/config.yml && blessmep"
-alias blessmep="~/.blessclient/blessclient run -c ~/.blessclient/config_production.yml"
+alias blessme="blessstage && blessprod"
+alias blessstage="~/.blessclient/blessclient run -c ~/.blessclient/config.yml"
+alias blessprod="~/.blessclient/blessclient run -c ~/.blessclient/config_production.yml"
