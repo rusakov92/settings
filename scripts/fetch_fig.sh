@@ -21,3 +21,4 @@ printf "\033[0;92m==> %s\n\033[0m" "Installing Fig"
 brew install --cask fig
 fig
 git checkout ~/.settings/.zshrc ~/.settings/.zprofile
+printf "\033[0;92m==> %s\n\033[0m" "Run `fig onboarding` for a quick tutorial"
