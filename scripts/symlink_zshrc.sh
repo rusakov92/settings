@@ -3,7 +3,7 @@
 printf "\033[0;92m==> %s\n\033[0m" "Symlinking .zshrc file"
 
 if [ -L ~/.zshrc ]; then
-    printf "\033[0;93m==> %s\n\033[0m" "Symlink§ for .zshrc already exists, skiping symlink"
+    printf "\033[0;93m==> %s\n\033[0m" "Symlink for .zshrc already exists, skiping symlink"
     exit 0
 fi
 

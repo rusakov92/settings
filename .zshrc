@@ -1,3 +1,8 @@
+# Fig pre block. Keep at the top of this file.
+if [ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]; then
+	. "$HOME/.fig/shell/zshrc.pre.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 export PATH=/usr/local/sbin:$HOME/bin:$HOME/.composer/vendor/bin:$HOME/.symfony/bin:/usr/local/bin:$PATH
 
@@ -65,7 +70,7 @@ ZSH_CUSTOM=$HOME/.settings/oh-my-zsh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( git docker docker-compose composer brew z zsh-syntax-highlighting zsh-autosuggestions )
+plugins=( you-should-use git docker docker-compose composer brew z zsh-syntax-highlighting zsh-autosuggestions )
 
 export LANG=en_US.UTF-8
 
@@ -95,3 +100,8 @@ done
 
 # Run check to update plugins and theme
 update_shell_settings
+
+# Fig post block. Keep at the bottom of this file.
+if [ -f "$HOME/.fig/shell/zshrc.post.zsh" ]; then
+	. "$HOME/.fig/shell/zshrc.post.zsh"
+fi

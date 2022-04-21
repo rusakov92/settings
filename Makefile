@@ -13,13 +13,16 @@ help_info:
 help: help_info
 install:
 	@bash scripts/symlink_zshrc.sh
-	@bash scripts/spaceship-prompt/install_spaceship_prompt.sh
-	@bash scripts/zsh-autosuggestions/install_autosuggestions.sh
-	@bash scripts/zsh-syntax-highlighting/install_syntax_highlighting.sh
-	@bash scripts/install_font.sh
+	@bash scripts/fetch_spaceship_prompt.sh
+	@bash scripts/fetch_autosuggestions.sh
+	@bash scripts/fetch_syntax_highlighting.sh
+	@bash scripts/fetch_you_should_use.sh
+	@bash scripts/fetch_font.sh
 update:
 	@bash scripts/update_repo.sh
 	@printf "\033[0;93m==> %s\n\033[0m" "Checking if plugins need updating..."
-	@bash scripts/spaceship-prompt/update_spaceship_prompt.sh
-	@bash scripts/zsh-autosuggestions/update_autosuggestions.sh
-	@bash scripts/zsh-syntax-highlighting/update_syntax_highlighting.sh
+	@bash scripts/fetch_spaceship_prompt.sh
+	@bash scripts/fetch_autosuggestions.sh
+	@bash scripts/fetch_syntax_highlighting.sh
+	@bash scripts/fetch_you_should_use.sh
+	@bash scripts/fetch_font.sh

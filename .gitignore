@@ -1,4 +1,4 @@
-oh-my-zsh/themes/spaceship*
-oh-my-zsh/plugins/zsh-syntax*
-oh-my-zsh/plugins/zsh-auto*
+oh-my-zsh/*
+!oh-my-zsh/plugins/.gitkeep
+!oh-my-zsh/themes/.gitkeep
 .zshrc.local
