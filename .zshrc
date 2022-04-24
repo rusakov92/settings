@@ -1,8 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-if [ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]; then
-	. "$HOME/.fig/shell/zshrc.pre.zsh"
-fi
-
 # If you come from bash you might have to change your $PATH.
 export PATH=/usr/local/sbin:$HOME/bin:$HOME/.composer/vendor/bin:$HOME/.symfony/bin:/usr/local/bin:$PATH
 
@@ -100,8 +95,3 @@ done
 
 # Run check to update plugins and theme
 update_shell_settings
-
-# Fig post block. Keep at the bottom of this file.
-if [ -f "$HOME/.fig/shell/zshrc.post.zsh" ]; then
-	. "$HOME/.fig/shell/zshrc.post.zsh"
-fi
