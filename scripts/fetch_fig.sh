@@ -3,7 +3,7 @@
 brew list --cask | grep -q fig
 if [[ $? -eq 0 ]]; then
     printf "\033[0;92m==> %s\n\033[0m" "Updating Fig"
-    brew upgrade --cask fig
+    fig update
     exit 0
 fi
 
