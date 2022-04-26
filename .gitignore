@@ -2,3 +2,4 @@ oh-my-zsh/*
 !oh-my-zsh/plugins/.gitkeep
 !oh-my-zsh/themes/.gitkeep
 .zshrc.local
+.zprofile

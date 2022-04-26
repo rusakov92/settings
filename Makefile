@@ -19,6 +19,7 @@ install:
 	@bash scripts/fetch_you_should_use.sh
 	@bash scripts/fetch_font.sh
 	@bash scripts/enable_touch_id_in_iterm.sh
+	@bash scripts/fetch_fig.sh
 update:
 	@zsh scripts/update_repo.sh
 	@printf "\033[0;93m==> %s\n\033[0m" "Checking if plugins need updating..."
@@ -28,3 +29,4 @@ update:
 	@bash scripts/fetch_you_should_use.sh
 	@bash scripts/fetch_font.sh
 	@bash scripts/enable_touch_id_in_iterm.sh
+	@bash scripts/fetch_fig.sh
